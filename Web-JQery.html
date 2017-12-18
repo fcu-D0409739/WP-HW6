@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>範例</title>
+<script src="jquery-3.2.1.js"></script>
+<script>
+$(document).ready(function(){
+ $("#coll").change(function(){
+	if(coll.value== 0){
+		$("#department").empty();
+		$("#department").append('<option > '+ '(空)'+ '</option>')
+	}else if(coll.value== 1){
+	$("#department").empty();
+	$("#department").append(
+		'<option > '+ '會計'+ '</option>',
+		'<option > '+ ' 企管'+'</option>',
+		'<option > '+ '統計'+ '</option>'
+		);	
+	}else if(coll.value== 2){
+		$("#department").empty();
+		$("#department").append(
+		'<option > '+ '土木'+ '</option>',
+		'<option > '+ ' 建築'+'</option>',
+		'<option > '+ ' 通訊'+'</option>',
+		'<option > '+ '運管'+ '</option>'
+		);	
+	}else if(coll.value== 3){
+		$("#department").empty();
+		$("#department").append(
+		'<option > '+ '資訊'+ '</option>',
+		'<option > '+ ' 電機'+'</option>',
+		'<option > '+ ' 電子'+'</option>',
+		'<option > '+ '通訊'+ '</option>'
+		);	
+	}
+ })
+});
+</script>
+
+</head>
+
+<body>
+	<p>請選擇學院</p>
+	<select id="coll">
+		<option value="0" id="no">請選擇</option>
+		<option value="1">商學院</option>
+		<option value="2">建築學院</option>
+		<option value="3">資電學院</option>
+	</select>
+	
+	
+	<p>請選擇科系</p>
+	<select id="department">
+		if(coll.value==0){
+			<option > (空)</option>
+		}
+	</select>
+</body>
+</html>
